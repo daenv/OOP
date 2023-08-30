@@ -1,0 +1,27 @@
+@url = http://localhost:9999/api/v1/permissions
+
+### CREATE PERMISSION
+POST {{url}}
+Content-Type: application/json
+
+{
+  "name": "Post Update",
+  "desc": "Cập nhật bài viết",
+  "slug": "post.update"
+}
+
+### UPDATE PERMISSION
+PATCH {{url}}/5
+Content-Type: application/json
+
+{
+  "name": "Product Update",
+  "desc": "Cập nhật sản phẩm",
+  "slug": "product.update"
+}
+
+### DELETE PERMISSION
+DELETE  {{url}}/10
+
+### GET ALL PERMISSION
+GET {{url}}?page=1&limit=5
